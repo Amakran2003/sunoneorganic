@@ -1,77 +1,107 @@
-# Sun One Organic - 360° Vegetable Yield Test Page
+# Sun One Organic - 360° Vegetable Yield Application
 
-This test page showcases your 360° panorama photo of vegetable yields in a beautiful, modern layout.
+A web application implementing 360° panoramic visualization of vegetable yields using embedded Momento360 viewer technology.
 
-## Features
+## Technical Features
 
-- **360° Panorama Integration**: Embedded Momento360 viewer
-- **Responsive Design**: Works on desktop, tablet, and mobile
-- **Modern UI**: Beautiful gradient background with glassmorphism effects
-- **Vegetable Showcase**: Grid layout featuring your main vegetables
-- **Interactive Elements**: Hover effects and smooth animations
+- **360° Panorama Integration**: Momento360 iframe embedding with custom parameters
+- **Responsive CSS Grid**: Flexible layout system with mobile-first approach
+- **Modern CSS3**: Flexbox, CSS Grid, custom properties, and media queries
+- **Component-Based Layout**: Modular HTML structure with semantic elements
+- **Progressive Enhancement**: Graceful degradation for legacy browsers
 
-## Vegetables Featured
+## Architecture
 
-- 🌿 Basil
-- 🧄 Garlic  
-- 🥬 Cabbage
-- 🧅 Onion
-- 🍠 Sweet Potatoes
-- 🥬 Kale
-- 🌶️ Radish
-- And more...
+### Frontend Stack
+- HTML5 semantic markup
+- CSS3 with modern layout techniques
+- Embedded iframe integration
+- No JavaScript dependencies (pure CSS implementation)
 
-## Testing the Page
+### Vegetable Data Structure
 
-1. Open `index.html` in any web browser
-2. The 360° panorama should load automatically
-3. Test navigation: click and drag to look around
-4. Test zoom: use mouse wheel or pinch gestures on mobile
-5. Verify responsive design on different screen sizes
+```
+images/no_bg/
+├── basil_no_bg.png
+├── cabbage_no_bg.png
+├── kale_no_bg.png
+├── onion_no_bg.png
+├── raddish_no_bg.png
+└── sweetpotato_no_bg.png
+```
 
-## For Wix Implementation
+## Development
 
-To add this to your Wix website:
+### Local Development
+```bash
+# Clone repository
+git clone https://github.com/Amakran2003/sunoneorganic.git
 
-1. **Add HTML Embed Component**:
-   - In Wix Editor, add an "HTML iframe" or "Custom Code" element
-   - Paste the iframe code:
-   ```html
-   <iframe 
-       src="https://momento360.com/e/u/47b0c03467b94acb913801f5e6cfb734?utm_campaign=embed&utm_source=other&heading=344.07&pitch=-47.98&field-of-view=81&size=medium&display-plan=true"
-       width="100%" 
-       height="500px" 
-       frameborder="0" 
-       allowfullscreen>
-   </iframe>
-   ```
+# Navigate to project
+cd sunoneorganic
 
-2. **Styling in Wix**:
-   - Set the iframe dimensions (recommended: 100% width, 400-600px height)
-   - Add border radius for rounded corners if desired
-   - Consider adding a container with background color/shadow
+# Serve locally (any HTTP server)
+python -m http.server 8000
+# or
+npx serve .
+```
 
-3. **Mobile Optimization**:
-   - Test on mobile preview in Wix
-   - Adjust height for mobile if needed (300-400px recommended)
+### Testing Protocol
 
-## Customization Options
+1. Cross-browser compatibility testing
+2. Responsive design validation across viewport sizes
+3. Touch interaction testing on mobile devices
+4. Performance profiling for iframe loading
+5. Accessibility compliance verification
 
-You can modify the Momento360 URL parameters:
-- `heading`: Initial viewing direction (0-360 degrees)
-- `pitch`: Initial vertical angle (-90 to 90 degrees)
-- `field-of-view`: Zoom level (30-120 degrees)
-- `size`: Player size (small, medium, large)
+## Integration
 
-## Notes
+### Momento360 API Parameters
+```javascript
+{
+  heading: 344.07,        // Initial viewing direction (degrees)
+  pitch: -47.98,          // Vertical angle (degrees)
+  'field-of-view': 81,    // Zoom level (degrees)
+  size: 'medium',         // Player dimensions
+  'display-plan': true    // Show navigation controls
+}
+```
 
-- The panorama loads from Momento360's servers
-- Ensure stable internet connection for best performance
-- The embed is mobile-friendly and touch-enabled
-- Consider adding loading indicators for slower connections
+### Wix CMS Integration
+```html
+<iframe 
+    src="https://momento360.com/e/u/47b0c03467b94acb913801f5e6cfb734?utm_campaign=embed&utm_source=other&heading=344.07&pitch=-47.98&field-of-view=81&size=medium&display-plan=true"
+    width="100%" 
+    height="500px" 
+    frameborder="0" 
+    allowfullscreen>
+</iframe>
+```
 
-## Browser Compatibility
+## Performance Considerations
 
-- Chrome, Firefox, Safari, Edge (latest versions)
-- iOS Safari, Chrome Mobile
-- Supports both desktop and mobile interactions
+- Optimized image assets with background removal
+- Lazy loading for viewport-based rendering
+- Responsive image scaling
+- Minimal CSS footprint
+- CDN-delivered panorama content
+
+## Browser Support Matrix
+
+| Browser | Desktop | Mobile | Touch Support |
+|---------|---------|--------|---------------|
+| Chrome  | ✅      | ✅     | ✅            |
+| Firefox | ✅      | ✅     | ✅            |
+| Safari  | ✅      | ✅     | ✅            |
+| Edge    | ✅      | ✅     | ✅            |
+
+## Deployment
+
+### GitHub Pages
+Automated deployment via GitHub Actions workflow on push to main branch.
+
+### Custom Hosting
+Static files can be served from any HTTP server supporting:
+- MIME type configuration for .avif images
+- HTTPS (recommended for iframe embedding)
+- Gzip compression for performance
