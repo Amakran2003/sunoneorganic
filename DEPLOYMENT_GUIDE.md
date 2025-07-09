@@ -8,9 +8,16 @@ I've successfully set up your project for GitHub Pages deployment by:
 2. ✅ **Committed and Pushed**: The workflow is now in your GitHub repository
 3. ✅ **Ready for Deployment**: Your site will automatically deploy on every push
 
+## 🚨 IMPORTANT: Fix the Current Error
+
+You're seeing this error because GitHub Pages isn't enabled yet:
+```
+Error: Get Pages site failed. Please verify that the repository has Pages enabled and configured to build using GitHub Actions
+```
+
 ## 🎯 Next Steps (Manual Configuration Required)
 
-### Step 1: Enable GitHub Pages in Repository Settings
+### Step 1: Enable GitHub Pages in Repository Settings (REQUIRED FIRST)
 
 1. **Go to your GitHub repository**: https://github.com/Amakran2003/sunoneorganic
 2. **Click on "Settings"** (top menu bar of your repo)
@@ -18,12 +25,15 @@ I've successfully set up your project for GitHub Pages deployment by:
 4. **Configure the Source**:
    - Under "Source", select **"GitHub Actions"**
    - This will enable the workflow we just created
+   - **This step MUST be done before the workflow can succeed**
 
-### Step 2: Wait for Deployment
+### Step 2: Re-run the Failed Workflow
 
-1. **Check Actions Tab**: Go to https://github.com/Amakran2003/sunoneorganic/actions
-2. **Look for "Deploy static content to Pages"** workflow
-3. **Wait for green checkmark** (usually takes 1-3 minutes)
+After enabling Pages:
+1. **Go to Actions Tab**: https://github.com/Amakran2003/sunoneorganic/actions
+2. **Click on the failed "Deploy static content to Pages" workflow**
+3. **Click "Re-run all jobs"** button
+4. **Wait for green checkmark** (usually takes 1-3 minutes)
 
 ### Step 3: Access Your Live Website
 
