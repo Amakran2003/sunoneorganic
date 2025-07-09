@@ -30,11 +30,11 @@
             padding: 20px;
         }
 
-        .header h1 {
-            font-size: 3rem;
+        .header .logo {
+            max-width: 300px;
+            height: auto;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-            color: #2E7D32;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
         }
 
         .header p {
@@ -167,8 +167,8 @@
         }
 
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2rem;
+            .header .logo {
+                max-width: 200px;
             }
             
             .panorama-container {
@@ -193,7 +193,7 @@
 <body>
     <div class="container">
         <header class="header">
-            <h1>🌱 Sun One Organic</h1>
+            <img src="images/logo.avif" alt="Sun One Organic" class="logo">
             <p>Experience our bountiful vegetable yield in immersive 360° panorama</p>
         </header>
 
