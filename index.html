@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun One Organic - Vegetable Yield 360° View</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #ffffff;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            color: #2E7D32;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.7;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #666;
+        }
+
+        .panorama-section {
+            background: rgba(46, 125, 50, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border: 1px solid rgba(46, 125, 50, 0.1);
+        }
+
+        .panorama-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: #2E7D32;
+        }
+
+        .panorama-container {
+            width: 90%;
+            height: 500px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .panorama-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .vegetables-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .vegetable-card {
+            background: rgba(46, 125, 50, 0.08);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(46, 125, 50, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 280px;
+        }
+
+        .vegetable-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .vegetable-icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+            display: block;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .vegetable-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2E7D32;
+            flex-shrink: 0;
+        }
+
+        .vegetable-description {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            line-height: 1.4;
+            color: #555;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .instructions {
+            background: rgba(46, 125, 50, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(46, 125, 50, 0.1);
+        }
+
+        .instructions h3 {
+            margin-bottom: 15px;
+            color: #2E7D32;
+            font-size: 1.5rem;
+        }
+
+        .instructions ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .instructions li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+        }
+
+        .instructions li:before {
+            content: "🌱";
+            position: absolute;
+            left: 0;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .panorama-container {
+                height: 300px;
+            }
+            
+            .vegetables-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 15px;
+            }
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            opacity: 0.6;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🌱 Sun One Organic</h1>
+            <p>Experience our bountiful vegetable yield in immersive 360° panorama</p>
+        </header>
+
+        <section class="panorama-section">
+            <h2 class="panorama-title">360° Vegetable Yield View</h2>
+            <div class="panorama-container">
+                <iframe 
+                    src="https://momento360.com/e/u/47b0c03467b94acb913801f5e6cfb734?utm_campaign=embed&utm_source=other&heading=344.07&pitch=-47.98&field-of-view=81&size=medium&display-plan=true"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="instructions">
+                <h3>How to Navigate the 360° View</h3>
+                <ul>
+                    <li>Click and drag to look around the vegetable garden</li>
+                    <li>Use your mouse wheel to zoom in and out</li>
+                    <li>On mobile: Touch and drag to explore, pinch to zoom</li>
+                    <li>Explore different areas to see our diverse vegetable yields</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="vegetables-section">
+            <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 30px; color: #2E7D32;">Our Fresh Vegetable Varieties</h2>
+            <div class="vegetables-grid">
+                <div class="vegetable-card">
+                    <img src="images/no_bg/basil_no_bg.png" alt="Fresh Basil" class="vegetable-icon">
+                    <div class="vegetable-name">Basil</div>
+                    <div class="vegetable-description">Fresh aromatic basil leaves, perfect for culinary creations and natural wellness.</div>
+                </div>
+                
+                <div class="vegetable-card">
+                    <span class="vegetable-icon" style="font-size: 3rem; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; flex-shrink: 0;">🧄</span>
+                    <div class="vegetable-name">Garlic</div>
+                    <div class="vegetable-description">Organic garlic bulbs with rich flavor and natural health benefits.</div>
+                </div>
+                
+                <div class="vegetable-card">
+                    <img src="images/no_bg/cabbage_no_bg.png" alt="Fresh Cabbage" class="vegetable-icon">
+                    <div class="vegetable-name">Cabbage</div>
+                    <div class="vegetable-description">Crisp, fresh cabbage heads rich in nutrients and perfect for various dishes.</div>
+                </div>
+                
+                <div class="vegetable-card">
+                    <img src="images/no_bg/onion_no_bg.png" alt="Fresh Onion" class="vegetable-icon">
+                    <div class="vegetable-name">Onion</div>
+                    <div class="vegetable-description">Sweet and pungent onions, essential for cooking and natural health remedies.</div>
+                </div>
+                
+                <div class="vegetable-card">
+                    <img src="images/no_bg/sweetpotato_no_bg.png" alt="Sweet Potatoes" class="vegetable-icon">
+                    <div class="vegetable-name">Sweet Potatoes</div>
+                    <div class="vegetable-description">Nutritious orange sweet potatoes, packed with vitamins and natural sweetness.</div>
+                </div>
+                
+                <div class="vegetable-card">
+                    <img src="images/no_bg/kale_no_bg.png" alt="Fresh Kale" class="vegetable-icon">
+                    <div class="vegetable-name">Kale</div>
+                    <div class="vegetable-description">Superfood kale leaves, loaded with antioxidants and essential nutrients.</div>
+                </div>
+                
+                <div class="vegetable-card">
+                    <img src="images/no_bg/raddish_no_bg.png" alt="Fresh Radish" class="vegetable-icon">
+                    <div class="vegetable-name">Radish</div>
+                    <div class="vegetable-description">Crisp and spicy radishes, great for salads and natural detoxification.</div>
+                </div>
+                
+                <div class="vegetable-card">
+                    <span class="vegetable-icon" style="font-size: 3rem; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; flex-shrink: 0;">🥕</span>
+                    <div class="vegetable-name">And More!</div>
+                    <div class="vegetable-description">Explore our 360° view to discover additional organic vegetables in our yield.</div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>© 2025 Sun One Organic - Naturally grown, sustainably harvested</p>
+        </footer>
+    </div>
+</body>
+</html>
