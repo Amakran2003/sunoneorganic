@@ -18,41 +18,8 @@ A web application implementing 360° panoramic visualization of vegetable yields
 - Embedded iframe integration
 - No JavaScript dependencies (pure CSS implementation)
 
-### Vegetable Data Structure
-
-```
-images/no_bg/
-├── basil_no_bg.png
-├── cabbage_no_bg.png
-├── kale_no_bg.png
-├── onion_no_bg.png
-├── raddish_no_bg.png
-└── sweetpotato_no_bg.png
-```
 
 ## Development
-
-### Local Development
-```bash
-# Clone repository
-git clone https://github.com/Amakran2003/sunoneorganic.git
-
-# Navigate to project
-cd sunoneorganic
-
-# Serve locally (any HTTP server)
-python -m http.server 8000
-# or
-npx serve .
-```
-
-### Testing Protocol
-
-1. Cross-browser compatibility testing
-2. Responsive design validation across viewport sizes
-3. Touch interaction testing on mobile devices
-4. Performance profiling for iframe loading
-5. Accessibility compliance verification
 
 ## Integration
 
@@ -78,30 +45,4 @@ npx serve .
 </iframe>
 ```
 
-## Performance Considerations
 
-- Optimized image assets with background removal
-- Lazy loading for viewport-based rendering
-- Responsive image scaling
-- Minimal CSS footprint
-- CDN-delivered panorama content
-
-## Browser Support Matrix
-
-| Browser | Desktop | Mobile | Touch Support |
-|---------|---------|--------|---------------|
-| Chrome  | ✅      | ✅     | ✅            |
-| Firefox | ✅      | ✅     | ✅            |
-| Safari  | ✅      | ✅     | ✅            |
-| Edge    | ✅      | ✅     | ✅            |
-
-## Deployment
-
-### GitHub Pages
-Automated deployment via GitHub Actions workflow on push to main branch.
-
-### Custom Hosting
-Static files can be served from any HTTP server supporting:
-- MIME type configuration for .avif images
-- HTTPS (recommended for iframe embedding)
-- Gzip compression for performance
